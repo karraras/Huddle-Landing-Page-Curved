@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Poppins:ital,wght@0,600;0,700;1,400&display=swap");
+
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --Light-Pink: hsl(321, 100%, 78%);
+  --Light-Red: hsl(0, 100%, 63%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Very-Pale-Blue: hsl(207, 100%, 98%);
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex div {
+  flex: 1;
+}
+
+div > img {
+  width: 100%;
+}
+nav {
+  margin-bottom: 100px;
+}
+nav .flex div img {
+  width: initial;
+}
+header p {
+  width: 50%;
+  margin: 30px auto;
+}
+
+.container {
+  padding: 50px 100px;
+}
+.container nav .flex button {
+  background-color: #ffff;
+  border: solid 2px var(--Pink);
+  padding: 10px 30px;
+  border-radius: 100px;
+  color: var(--Pink);
+  font-weight: 700;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.container nav .flex button:hover {
+  border: solid 2px var(--Light-Pink);
+  color: var(--Light-Pink);
+  cursor: pointer;
+  background-color: #ffff;
+}
+nav .flex div:last-child {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+:is(section, header) .center h1 {
+  font-size: 50px;
+}
+.center h1 {
+  font-size: 80px;
+}
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+}
+p,
+li,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+h1,
+h2,
+p {
+  margin-bottom: 40px;
+}
+header .container button {
+  background-color: var(--Pink);
+  border: none;
+  padding: 20px 100px;
+  color: #ffff;
+  border-radius: 100px;
+  font-weight: 700;
+  margin-bottom: 100px;
+  transition: all 0.3s ease-in-out;
+}
+
+header .container button:hover {
+  background-color: var(--Light-Pink);
+  cursor: pointer;
+}
+section .center button {
+  background-color: var(--Pink) !important;
+  border: none;
+  padding: 20px 100px;
+  color: white;
+  border-radius: 100px;
+  position: relative;
+}
+section .center button:hover {
+  background-color: var(--Light-Pink) !important;
+  cursor: pointer !important;
+}
+
+.flex div:first-child {
+  padding-right: 50px;
+}
+.flex div:last-child {
+  padding-left: 50px;
+}
+
+:is(section:nth-of-type(2), section:nth-of-type(4)) {
+  margin: 100px auto;
+  background-color: var(--Very-Pale-Blue);
+}
+
+:is(section:nth-of-type(2), section:nth-of-type(4), footer) {
+  position: relative;
+}
+:is(section:nth-of-type(2), section:nth-of-type(4))::after,
+:is(section:nth-of-type(2), section:nth-of-type(4), footer)::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-attachment: scroll;
+  background-size: contain;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+section:nth-of-type(2)::before {
+  background-image: url(./images/bg-section-top-desktop-1.svg);
+  top: -125px;
+}
+section:nth-of-type(2)::after {
+  background-image: url(./images/bg-section-bottom-desktop-1.svg);
+  bottom: -530px;
+}
+
+section:nth-of-type(4)::before {
+  background-image: url(./images/bg-section-top-desktop-2.svg);
+  top: -105px;
+}
+section:nth-of-type(4)::after {
+  background-image: url(./images/bg-section-bottom-desktop-2.svg);
+  bottom: -500px;
+}
+footer::before {
+  background-image: url(./images/bg-footer-top-desktop.svg);
+  top: -140px;
+}
+/* the foooter */
+footer {
+  margin-top: 150px;
+  background-color: var(--Very-Dark-Cyan);
+  color: #ffff;
+}
+
+ul {
+  list-style: none;
+}
+
+footer li {
+  margin-bottom: 15px;
+}
+.captal {
+  text-transform: uppercase;
+  margin-top: 45px;
+}
+footer :is(p, li) {
+  font-weight: 100;
+  font-size: 12px;
+}
+.fcent img {
+  margin-right: 10px;
+}
+.fcent {
+  display: flex;
+  align-items: center;
+}
+.fcent p {
+  margin: 0px;
+}
+.social {
+  margin-top: 50px;
+  padding: 0px !important;
+}
+.social i {
+  transition: all 0.3s ease-in-out;
+}
+.social i:hover {
+  cursor: pointer;
+  color: hsl(210, 100%, 71%);
+}
+.social i:not(i:last-child) {
+  margin-right: 10px;
+}
+footer .flex div {
+  padding: 0 !important;
+}
+footer .short {
+  margin-right: 65px;
+}
+footer .flex {
+  justify-content: space-between;
+}
+footer .flex button:first-child {
+  border-radius: 5px;
+  padding: 20px;
+  border: none;
+  width: 50%;
+  cursor: pointer;
+  position: relative;
+}
+footer .flex button:last-child {
+  border-radius: 5px;
+  padding: 13px;
+  border: none;
+  width: 40%;
+  color: white;
+  background-color: var(--Pink);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+footer .flex button:last-child:hover {
+  background-color: var(--Light-Pink);
+  cursor: pointer;
+}
+.one-01 {
+  position: relative;
+}
+.one-01 img {
+  width: 5%;
+  position: absolute;
+  top: -20%;
+  left: 33%;
+}
+
+/* the media qoery */
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .container {
+    padding: 10px 10px;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .flex :is(div:first-child, div:last-child) {
+    flex: auto;
+    padding: 0 0;
+  }
+  :is(section, header) .center h1 {
+    font-size: 25px;
+  }
+
+  header p {
+    width: 90%;
+    font-size: 13px;
+  }
+  .container button {
+    padding: 15px !important;
+    width: 80%;
+  }
+  section {
+    text-align: center;
+  }
+  .reverse {
+    flex-direction: column-reverse;
+  }
+  footer {
+    text-align: left;
+  }
+  footer .short {
+    margin-right: 0px;
+  }
+  .social {
+    margin-top: 50px;
+    padding: 0px;
+  }
+  .fcent {
+    justify-content: left;
+  }
+  footer .flex div:first-child {
+    margin-top: 30px;
+  }
+  footer .flex button:last-child {
+    margin-top: 15px;
+  }
+  footer .flex button:first-child {
+    width: 100%;
+  }
+  footer li .flex {
+    align-items: flex-end;
+  }
+  nav .flex {
+    flex-direction: row;
+  }
+  nav img {
+    width: 140px !important;
+  }
+  .container .flex button {
+    padding: 5px 15px;
+  }
+
+  section:nth-of-type(2)::before {
+    background-image: url(./images/bg-section-top-desktop-1.svg);
+    top: -40px;
+    left: 0;
+  }
+  section:nth-of-type(2)::after {
+    background-image: url(./images/bg-section-bottom-desktop-1.svg);
+    bottom: -525px;
+    left: 0;
+  }
+
+  section:nth-of-type(4)::before {
+    background-image: url(./images/bg-section-top-desktop-2.svg);
+    top: -35px;
+    left: 0;
+  }
+  section:nth-of-type(4)::after {
+    background-image: url(./images/bg-section-bottom-desktop-2.svg);
+    bottom: -485px;
+    left: 0;
+  }
+  footer::before {
+    background-image: url(./images/bg-footer-top-mobile.svg);
+    top: -40px;
+  }
+}
